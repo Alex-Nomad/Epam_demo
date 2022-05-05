@@ -1,0 +1,74 @@
+$ ssh-keygen -t rsa -C "kuzmenko2012@gmail.com" - создание SSH key parе.
+--------------------------------------------------------------------------------------------
+$ git config --global user.name "Alexander Kuzmenko" - задать свое имя глобально.
+--------------------------------------------------------------------------------------------
+$ git config --global user.email "kuzmenko2012@gmail.com" - задать почту глобально.
+--------------------------------------------------------------------------------------------
+$ git config --global user.name - проверка глобального имени.
+--------------------------------------------------------------------------------------------
+$ git config --global ser.email - проверка глобальной почты.
+--------------------------------------------------------------------------------------------
+$ cd /d/EPAM/DATA/TEMP - новигация по папкам (/d/EPAM/DATA/TEMP).
+--------------------------------------------------------------------------------------------
+$ ls - выводит список папок и файлов в текущей папке (/d/EPAM/DATA/TEMР).
+--------------------------------------------------------------------------------------------
+$ cd Epam-demo/ - переход в подпапку в текущей папке (/d/EPAM/DATA/TEMP/epam_demo (main)).
+--------------------------------------------------------------------------------------------
+$ git status - проверка наличия новых файлов.
+/* ОТВЕТ
+  On branch main
+  Your branch is up to date with 'origin/main'.
+
+  Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        song.txt
+
+  nothing added to commit but untracked files present (use "git add" to track)
+*/
+--------------------------------------------------------------------------------------------
+$ git add song.txt - добавление нового файла к проекту.
+--------------------------------------------------------------------------------------------
+$ git status - проверка утверждения нового файла.
+/* ОТВЕТ
+  On branch main
+  Your branch is up to date with 'origin/main'.
+
+  Changes to be committed:
+    (use "git restore --staged <file>..." to unstage)
+          new file:   song.txt
+*/
+--------------------------------------------------------------------------------------------
+$ git commit -m "add 3 lines in the song" - определения какие именно строки нужно сохранить в файле.
+/* ОТВЕТ
+  [main f59754f] add 3 lines in the song
+  1 file changed, 3 insertions(+)
+  create mode 100644 song.txt
+*/
+--------------------------------------------------------------------------------------------
+$ git log - информация об изменениях.
+/* ОТВЕТ
+  commit f59754f468232397beb00e11e3816584066a3f65 (HEAD -> main)
+  Author: Alexander Kuzmenko <kuzmenko2012@gmail.com>
+  Date:   Thu May 5 10:21:03 2022 +0300
+
+      add 3 lines in the song
+
+  commit e91ac50cce43193c3c586e3540f394aa1a480938 (origin/main, origin/HEAD)
+  Author: Alex <kuzmenko2012@gmail.com>
+  Date:   Thu May 5 09:59:26 2022 +0300
+
+      Initial commit
+*/
+--------------------------------------------------------------------------------------------
+$ git push - перенос изменений в репозиторий.
+/* ОТВЕТ
+  Enumerating objects: 4, done.
+  Counting objects: 100% (4/4), done.
+  Delta compression using up to 4 threads
+  Compressing objects: 100% (2/2), done.
+  Writing objects: 100% (3/3), 320 bytes | 320.00 KiB/s, done.
+  Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+  To github.com:Alex-Nomad/Epam_demo.git
+     e91ac50..f59754f  main -> main
+*/
+--------------------------------------------------------------------------------------------
