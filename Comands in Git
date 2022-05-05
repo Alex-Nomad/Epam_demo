@@ -74,3 +74,19 @@ $ git push - перенос изменений в репозиторий.
      e91ac50..f59754f  main -> main
 */
 --------------------------------------------------------------------------------------------
+$ git pull - синхронизация файлов на локальной машине с репозиторием.
+/*ОТВЕТ
+  remote: Enumerating objects: 11, done.
+  remote: Counting objects: 100% (11/11), done.
+  remote: Compressing objects: 100% (8/8), done.
+  remote: Total 9 (delta 2), reused 0 (delta 0), pack-reused 0
+  Unpacking objects: 100% (9/9), 3.17 KiB | 60.00 KiB/s, done.
+  From github.com:Alex-Nomad/Epam_demo
+     f59754f..a46de93  main       -> origin/main
+  Updating f59754f..a46de93
+  Fast-forward
+   Comands in Git | 76 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   song.txt       |  3 +++
+   2 files changed, 79 insertions(+)
+   create mode 100644 Comands in Git
+ --------------------------------------------------------------------------------------------
