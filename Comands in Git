@@ -147,10 +147,10 @@ EXTRAS
 $ git config --global user.name "NAME" - задать глобальое имя пользователя.
 $ git config --global user.email "EMAIL@google.com" - задать глобально email пользователя.
 $ git config --global core.editor "'C:/Program Files (86)/Notepad++/notepad++.exe'" - задать глобально редактор кода.
-$ git blame - показывает кто последний делал изменения в файле и что было изменено построково.
+$ git blame - показывает кто и в каком порядке делал изменения в файле и что было изменено построково.
 $ git bisect - бинарный поиск коммита который привел к багам.
-$ git log --pretty=online - показывает коммиты с сылками с обратным хронологическим индексом.
-$ git log --pretty=format:"%h %s" -graph - показывает коммиты с указанием часа и секунд.
+$ git log --pretty=online - показывает коммиты с сылками с обратным хронологическим индексом в одну строку.
+$ git log --pretty=format:"%h %s" -graph - показывает коммиты с указанием %h хеш коммита и %s субъект. -graph не сработал.
 $ git config --global alias.last 'log -1 HEAD' - задать псевдоним last лобально для 'log -1 HEAD'.
 $ git last - обращение к псевдониму last.
 $ git log master..experiment - показывает все коммиты для ветки master.
