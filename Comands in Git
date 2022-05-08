@@ -130,11 +130,33 @@ $ git checkout ver1 - переход к тегу ver1.
 STASH (тайник)
 $ git stash save "description" - сохранение рабочей папки "description".
 $ git stash list - список тайников.
-$ git stash pop - взять из тайника и удать в тайнике.
+$ git stash pop - взять из тайника и удалить в тайнике.
 $ git stash apply - взять из тайника и оставить в тайнике.
 $ git stash drop - удалить / очистить тайник.
-
-
+--------------------------------------------------------------------------------------------
+УДАЛЕННЫЙ РЕПОЗИТОРИЙ
+$ git remote add <name> <url> - добавить удаленный репозиторий на локальную машину.
+$ git remote add origion git@github.com:Alex-Nomad/Epam_demo.git - пример.
+$ git remote -v - показать доступные репозитории на локальную машину.
+$ git remote show <name> - пример.
+$ git remote show git@github.com:Alex-Nomad/Epam_demo.git - пример.
+$ git push - выгрузить локальный репозиторий на GitHub.
+$ git fetch - вытянуть епозиторий с GitHub на локальную машину.
+--------------------------------------------------------------------------------------------
+EXTRAS
+$ git config --global user.name "NAME" - задать глобальое имя пользователя.
+$ git config --global user.email "EMAIL@google.com" - задать глобально email пользователя.
+$ git config --global core.editor "'C:/Program Files (86)/Notepad++/notepad++.exe'" - задать глобально редактор кода.
+$ git blame - показывает кто последний делал изменения в файле и что было изменено построково.
+$ git bisect - бинарный поиск коммита который привел к багам.
+$ git log --pretty=online - показывает коммиты с сылками с обратным хронологическим индексом.
+$ git log --pretty=format:"%h %s" -graph - показывает коммиты с указанием часа и секунд.
+$ git config --global alias.last 'log -1 HEAD' - задать псевдоним last лобально для 'log -1 HEAD'.
+$ git last - обращение к псевдониму last.
+$ git log master..experiment - показывает все коммиты для ветки master.
+$ git filter-branch --tree-filter 'rm -f password.txt' HEAD - позволяет переписать историю версий Git, переписав ветки, указанные в <параметрах списка изменений>, применяя настраиваемые фильтры к каждой версии.
+$ git rerere - частые однотипные конфликты при слиянии можно добавить в список rerere.enable для автоматического решения этих кофликтов в дальнейшем. 
+$ git submodule - проверяет, обновляет и управляет подмодулями.
 
 
 
